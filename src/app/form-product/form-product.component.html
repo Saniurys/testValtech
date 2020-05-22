@@ -1,0 +1,27 @@
+<div class="prod-form" >
+    <div class="row">
+ 
+        <div class="col-md-6 form-group">
+            <input placeholder="Nombre" class="form-control" [(ngModel)]="product.nombre">
+        </div>
+        <div class="col-md-6 form-group">
+            <input placeholder="Costo" type="number" class="form-control" [(ngModel)]="product.costo">
+        </div>
+        <div class="col-md-6 form-group">
+            <select placeholder="Estado" class="form-control"  [(ngModel)]="product.estado">
+                <option [value]="true">Disponible</option>
+                <option [value]="false">No Disponible</option>
+            </select>
+        </div>
+        <div class="col-md-6 form-group">
+            <input placeholder="Stock" type="number" class="form-control" [(ngModel)]="product.stock">
+        </div>
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+            <button class="btn btn-primary btn-lg btn-block" (click)="createOrUpdate(product)">
+                <i class="fa fa-save"></i>
+                {{buttonName}}
+            </button>
+        </div>
+    </div>
+</div>
